@@ -1,0 +1,22 @@
+p{
+    color: black;
+    font-size: 20px;
+}
+#workspace{
+    width: 600px;
+    height: 300px;
+    position: relative;
+    border: 2px solid black;
+}
+canvas {
+position: absolute;
+}
+#arms {
+z-index: 3;
+}
+#workpiece {
+z-index: 2;
+}
+#background {
+z-index: 1;
+}

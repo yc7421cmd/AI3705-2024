@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link  type="text/css" href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./static/scripts/main.js" defer></script>
+    <title>AI3705-2024</title>
+  </head>
+  <body >
+    <div id="data_container" d="{{ lines  }}" state ='{{ state}}'></div>
+    <h1 >AI3705-2024 project</h1>
+    <p>This page showcases the outcomes of our project.Our code can be found <a href="https://github.com/yc7421cmd/AI3705-2024/tree/bowen"
+        >here</a></p>
+    <form action="/update" method="get">
+      <label for="color">请选择要放入工件的颜色：</label>
+      <select id="color" name="user_color">
+        <option value="red">红色</option>
+        <option value="metallic">金属色</option>
+        <option value="black">黑色</option>
+      </select>
+      <button type="submit" id="add_button" >添加工件</button>
+    </form>
+    <br>
+    <div id = 'workspace'>
+      <canvas id="background" width="600" height="300"></canvas>
+      <canvas id="workpiece" width="600" height="300"></canvas>
+      <canvas id="arms" width="600" height="300"></canvas>
+    </div>
+    
+    <br>
+    <button id="start">开始</button>
+    <button id="reset">重置</button>
+    <br>
+    <label >正在执行的命令：</label>
+    <p id="command-line"></p>
+    <br>
+    <label >最终工件进入的滑槽：</label>
+    <p id="result"></p>
+  </body>
+</html>
