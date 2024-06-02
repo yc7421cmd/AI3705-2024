@@ -210,7 +210,7 @@ async function animation(){
             result.textContent = "滑槽3";
             break;
         default:
-            result.textContent = "未知";
+            result.textContent = "";
     }
 }
 function update_data(color,event){
@@ -236,6 +236,8 @@ add_button.addEventListener("click", function(event){
     event.preventDefault();
     selectedcolor = selectcolor.value;
     update_data(selectedcolor,event);
+    var result = document.getElementById("result");
+    result.textContent = "";
 });
 
 
