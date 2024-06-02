@@ -254,7 +254,6 @@ def process(color):
     if(os.path.exists("log.txt")):
         os.remove("log.txt")
     if(os.path.exists("state.json")):
-        print("cnmcncmmcnncnc")
         os.remove("state.json")
     sorting_unit = system()
     while(True):
